@@ -1,331 +1,443 @@
- /* --- Configurações Globais (Reutilizado do padrão Atron) --- */
- :root {
-     --cor-amarelo: #FFC700;
-     --cor-cinza-escuro: #333333;
-     --cor-cinza-claro: #F4F4F4;
-     --cor-branco: #FFFFFF;
-     --cor-texto: #555555;
- }
+   /* --- Configurações Globais --- */
+        :root {
+            --cor-amarelo: #FFC700;
+            --cor-cinza-escuro: #333333;
+            --cor-cinza-claro: #F4F4F4;
+            --cor-branco: #FFFFFF;
+            --cor-texto: #555555;
+        }
 
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
- html {
-     scroll-behavior: smooth;
- }
+        html {
+            scroll-behavior: smooth;
+        }
 
- body {
-     font-family: 'Lato', sans-serif;
-     color: var(--cor-texto);
-     line-height: 1.6;
-     background-color: var(--cor-branco);
- }
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--cor-texto);
+            line-height: 1.6;
+            background-color: var(--cor-branco);
+        }
 
- h1,
- h2,
- h3 {
-     font-family: 'Montserrat', sans-serif;
-     color: var(--cor-cinza-escuro);
-     font-weight: 700;
- }
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--cor-cinza-escuro);
+            font-weight: 700;
+        }
 
- .container {
-     max-width: 1200px;
-     margin: 0 auto;
-     padding: 0 20px;
- }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
- section {
-     padding: 80px 0;
-     text-align: center;
- }
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
 
- /* --- Header (Padrão Atron) --- */
- .header {
-     background-color: var(--cor-branco);
-     padding: 20px 0;
-     border-bottom: 1px solid #EEE;
-     position: sticky;
-     top: 0;
-     z-index: 1000;
-     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
- }
+        /* --- Header --- */
+        .header {
+            background-color: var(--cor-branco);
+            padding: 20px 0;
+            border-bottom: 1px solid #EEE;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
 
- .header .container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
- .logo {
-     font-family: 'Montserrat', sans-serif;
-     font-size: 24px;
-     font-weight: 700;
-     color: var(--cor-cinza-escuro);
-     text-decoration: none;
- }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--cor-cinza-escuro);
+            text-decoration: none;
+        }
 
- .nav-menu a {
-     font-family: 'Lato', sans-serif;
-     font-weight: 700;
-     margin: 0 15px;
-     text-decoration: none;
-     color: var(--cor-cinza-escuro);
-     transition: color 0.3s ease;
- }
+        .nav-menu a {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--cor-cinza-escuro);
+            transition: color 0.3s ease;
+        }
 
- .nav-menu a:hover {
-     color: var(--cor-amarelo);
- }
+        .nav-menu a:hover {
+            color: var(--cor-amarelo);
+        }
 
- /* --- Botões (Padrão Atron) --- */
- .btn {
-     padding: 12px 28px;
-     text-decoration: none;
-     border-radius: 5px;
-     font-weight: 700;
-     display: inline-block;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
+        /* --- Botões --- */
+        .btn {
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
- .btn-amarelo {
-     background-color: var(--cor-amarelo);
-     color: var(--cor-cinza-escuro);
- }
+        .btn-amarelo {
+            background-color: var(--cor-amarelo);
+            color: var(--cor-cinza-escuro);
+        }
 
- .btn-amarelo:hover {
-     transform: translateY(-3px);
-     box-shadow: 0 4px 15px rgba(255, 199, 0, 0.4);
- }
+        .btn-amarelo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 199, 0, 0.4);
+        }
 
- .btn-outline {
-     border: 2px solid var(--cor-cinza-escuro);
-     color: var(--cor-cinza-escuro);
- }
+        .btn-outline {
+            border: 2px solid var(--cor-cinza-escuro);
+            color: var(--cor-cinza-escuro);
+        }
 
- .btn-outline:hover {
-     background-color: var(--cor-cinza-escuro);
-     color: var(--cor-branco);
-     transform: translateY(-3px);
- }
+        .btn-outline:hover {
+            background-color: var(--cor-cinza-escuro);
+            color: var(--cor-branco);
+            transform: translateY(-3px);
+        }
 
- /* --- Seção Hero (Padrão Atron) --- */
- .hero {
-     height: 90vh;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-     color: var(--cor-branco);
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/predio-ad-sem-carros.png');
-     background-size: cover;
-     background-position: center;
- }
+        /* --- Seção Hero --- */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--cor-branco);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/predio-ad-sem-carros.png');
+            background-size: cover;
+            background-position: center;
+        }
 
- .hero h1 {
-     color: var(--cor-branco);
-     font-size: 52px;
-     margin-bottom: 20px;
-     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
- }
+        .hero h1 {
+            color: var(--cor-branco);
+            font-size: 52px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
 
- .hero p {
-     font-size: 20px;
-     margin-bottom: 30px;
-     max-width: 600px;
-     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
- }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
 
- /* --- Seção de Serviços (Cards adaptados do padrão Atron) --- */
- .servicos h2 {
-     margin-bottom: 60px;
-     font-size: 36px;
- }
+        /* --- Seção de Serviços --- */
+        .servicos h2 {
+            margin-bottom: 60px;
+            font-size: 36px;
+        }
 
- .servicos-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-     gap: 30px;
- }
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
 
- .servico-card {
-     background-color: var(--cor-branco);
-     padding: 40px 30px;
-     border-radius: 8px;
-     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
+        .servico-card {
+            background-color: var(--cor-branco);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
- .servico-card:hover {
-     transform: translateY(-5px);
-     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
- }
+        .servico-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .servico-card svg {
+            margin-bottom: 20px;
+            color: var(--cor-amarelo);
+        }
 
- .servico-card img {
-     width: 60px;
-     height: 60px;
-     margin-bottom: 20px;
- }
+        .servico-card h3 {
+            margin-bottom: 10px;
+        }
 
- .servico-card h3 {
-     margin-bottom: 10px;
- }
+        /* --- Seção Portfólio Showcase --- */
+        .portfolio-showcase {
+            background-color: var(--cor-cinza-claro);
+        }
 
- /* --- Seção Portfólio Showcase (Cards adaptados do padrão Atron) --- */
- .portfolio-showcase {
-     background-color: var(--cor-cinza-claro);
- }
+        .portfolio-showcase h2 {
+            margin-bottom: 60px;
+            font-size: 36px;
+        }
 
- .portfolio-showcase h2 {
-     margin-bottom: 60px;
-     font-size: 36px;
- }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
 
- .portfolio-grid {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     gap: 30px;
- }
+        .portfolio-card {
+            background-color: var(--cor-branco);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+        }
+        
+        .portfolio-card .card-image-wrapper {
+            position: relative;
+        }
 
- .portfolio-card {
-     background-color: var(--cor-branco);
-     border-radius: 8px;
-     overflow: hidden;
-     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
+        .portfolio-card img {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: filter 0.3s ease;
+        }
 
- .portfolio-card:hover {
-     transform: translateY(-5px);
-     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
- }
+        .portfolio-card .card-content {
+            padding: 20px;
+        }
 
- .portfolio-card img {
-     display: block;
-     width: 100%;
-     height: 250px;
-     object-fit: cover;
- }
+        .portfolio-card h3 {
+            margin: 0;
+        }
 
- .portfolio-card h3 {
-     margin: 20px;
- }
+        .portfolio-card .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
- /* --- Seção Sobre (Layout de 2 colunas do padrão Atron) --- */
- .sobre h2 {
-     font-size: 36px;
- }
+        .portfolio-card:hover .card-overlay {
+            opacity: 1;
+        }
 
- .sobre-grid {
-     display: flex;
-     align-items: center;
-     gap: 60px;
-     text-align: left;
- }
+        .btn-modal {
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            background-color: var(--cor-amarelo);
+            color: var(--cor-cinza-escuro);
+            border: none;
+            cursor: pointer;
+            transform: translateY(20px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
 
- .sobre-grid .col-img {
-     flex: 1;
- }
+        .portfolio-card:hover .btn-modal {
+             transform: translateY(0);
+             opacity: 1;
+        }
 
- .sobre-grid .col-img img {
-     width: 100%;
-     border-radius: 8px;
-     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
- }
+        /* --- Seção Sobre --- */
+        .sobre h2 {
+            font-size: 36px;
+        }
 
- .sobre-grid .col-text {
-     flex: 1;
- }
+        .sobre-grid {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            text-align: left;
+        }
 
- .sobre-grid h2 {
-     margin-bottom: 20px;
- }
+        .sobre-grid .col-img {
+            flex: 1;
+        }
 
- .sobre-grid p {
-     margin-bottom: 30px;
- }
+        .sobre-grid .col-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
 
- /* --- Seção CTA Final (Padrão Atron) --- */
- .cta-final {
-     background-color: var(--cor-cinza-escuro);
-     color: var(--cor-branco);
- }
+        .sobre-grid .col-text {
+            flex: 1;
+        }
 
- .cta-final h2 {
-     color: var(--cor-branco);
-     margin-bottom: 30px;
-     font-size: 36px;
- }
+        .sobre-grid h2 {
+            margin-bottom: 20px;
+        }
 
- /* --- Footer (Padrão Atron) --- */
- .footer {
-     background-color: #222;
-     color: #AAA;
-     padding: 60px 0;
-     text-align: left;
- }
+        .sobre-grid p {
+            margin-bottom: 30px;
+        }
 
- .footer-grid {
-     display: grid;
-     grid-template-columns: 2fr 1fr 1fr 1fr;
-     gap: 40px;
- }
+        /* --- Seção CTA Final --- */
+        .cta-final {
+            background-color: var(--cor-cinza-escuro);
+            color: var(--cor-branco);
+        }
 
- .footer h3 {
-     color: var(--cor-branco);
-     margin-bottom: 15px;
- }
+        .cta-final h2 {
+            color: var(--cor-branco);
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
 
- .footer a {
-     color: #AAA;
-     text-decoration: none;
-     display: block;
-     margin-bottom: 8px;
-     transition: color 0.3s ease;
- }
+        /* --- Footer --- */
+        .footer {
+            background-color: #222;
+            color: #AAA;
+            padding: 60px 0;
+            text-align: left;
+        }
 
- .footer a:hover {
-     color: var(--cor-amarelo);
- }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
 
- /* --- Responsividade --- */
- @media (max-width: 992px) {
-     .portfolio-grid {
-         grid-template-columns: repeat(2, 1fr);
-     }
+        .footer h3 {
+            color: var(--cor-branco);
+            margin-bottom: 15px;
+        }
 
-     .footer-grid {
-         grid-template-columns: repeat(2, 1fr);
-     }
- }
+        .footer a {
+            color: #AAA;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
 
- @media (max-width: 768px) {
-     .hero h1 {
-         font-size: 36px;
-     }
+        .footer a:hover {
+            color: var(--cor-amarelo);
+        }
 
-     .nav-menu {
-         display: none;
-     }
+        /* --- Estrutura do Modal --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
-     /* Simplificação para wireframe, em produção usaríamos um menu hambúrguer */
-     .servicos-grid {
-         grid-template-columns: 1fr;
-     }
+        .modal-container {
+            background: var(--cor-branco);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.4s ease;
+        }
 
-     .portfolio-grid {
-         grid-template-columns: 1fr;
-     }
+        .modal-overlay.active .modal-container {
+            transform: scale(1);
+        }
 
-     .sobre-grid {
-         flex-direction: column;
-     }
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--cor-cinza-escuro);
+        }
 
-     .footer-grid {
-         grid-template-columns: 1fr;
-         text-align: center;
-     }
- }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .modal-content h2 {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            text-align: left;
+            color: var(--cor-texto);
+            line-height: 1.7;
+        }
+
+
+        /* --- Responsividade --- */
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .servicos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sobre-grid {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }

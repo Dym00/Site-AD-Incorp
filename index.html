@@ -72,17 +72,56 @@
             <div class="container">
                 <h2>Cases de Sucesso que Falam por si</h2>
                 <div class="portfolio-grid">
+                    <!-- Case 1 -->
                     <div class="portfolio-card">
-                        <img src="/images/Foto DH 1 Editada.jpg" alt="Imagem do Projeto Dream House I">
-                        <h3>Dream House I</h3>
+                        <div class="card-image-wrapper">
+                             <img src="/images/Foto DH 1 Editada.jpg" alt="Imagem do Projeto Dream House I">
+                             <div class="card-overlay">
+                                 <button class="btn-modal" 
+                                     data-title="Residência Dream House I"
+                                     data-img="/images/Foto DH 1 Editada.jpg"
+                                     data-description="Este projeto foi um desafio de engenharia e design, transformando um terreno complexo em uma residência de luxo com automação completa e acabamentos de altíssimo padrão. A integração com a paisagem foi um pilar fundamental, resultando em ambientes que mesclam o interno e o externo de forma fluida e elegante, superando todas as expectativas do cliente.">
+                                     Ver Detalhes
+                                 </button>
+                             </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Dream House I</h3>
+                        </div>
                     </div>
+                    <!-- Case 2 -->
                     <div class="portfolio-card">
-                        <img src="images/IMG_1594.jpg" alt="Imagem da Reforma da AACD">
-                        <h3>Reforma AACD</h3>
+                        <div class="card-image-wrapper">
+                             <img src="images/IMG_1594.jpg" alt="Imagem da Reforma da AACD">
+                             <div class="card-overlay">
+                                 <button class="btn-modal"
+                                     data-title="Reforma Institucional AACD"
+                                     data-img="images/IMG_1594.jpg"
+                                     data-description="Uma reforma completa que exigiu planejamento logístico rigoroso para não interromper as operações da instituição. O projeto teve como foco principal a acessibilidade universal, a implementação de materiais de alta durabilidade e a humanização dos ambientes terapêuticos para melhor atender e acolher os pacientes.">
+                                     Ver Detalhes
+                                 </button>
+                             </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Reforma AACD</h3>
+                        </div>
                     </div>
-                    <div class="portfolio-card">
-                        <img src="/images/atron_motores_02.JPG" alt="Imagem do Galpão Administrativo">
-                        <h3>Galpão Adm.</h3>
+                    <!-- Case 3 -->
+                     <div class="portfolio-card">
+                        <div class="card-image-wrapper">
+                             <img src="/images/atron_motores_02.JPG" alt="Imagem do Galpão Administrativo">
+                             <div class="card-overlay">
+                                 <button class="btn-modal"
+                                     data-title="Galpão Industrial e Administrativo"
+                                     data-img="/images/atron_motores_02.JPG"
+                                     data-description="Construção de um complexo industrial e administrativo otimizado para logística e máxima eficiência energética. O projeto incluiu a execução de fundações especiais para suportar maquinário pesado e a montagem de estruturas metálicas de grande vão, permitindo um layout interno flexível. A obra foi entregue em tempo recorde, atendendo às necessidades de expansão do cliente.">
+                                     Ver Detalhes
+                                 </button>
+                             </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Galpão Adm.</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,7 +144,6 @@
                 </div>
             </div>
         </section>
-
         <section class="cta-final" id="contato">
             <div class="container">
                 <h2>Vamos tirar o seu projeto do papel?</h2>
@@ -138,6 +176,66 @@
             </div>
         </div>
     </footer>
+
+     <!-- Estrutura HTML do Modal -->
+    <div class="modal-overlay" id="portfolio-modal">
+        <div class="modal-container">
+            <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+            <div class="modal-content" id="modal-content">
+                <img src="" alt="Imagem do projeto" id="modal-img">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modalButtons = document.querySelectorAll('.btn-modal');
+        const modalOverlay = document.getElementById('portfolio-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        
+        const modalTitle = document.getElementById('modal-title');
+        const modalImg = document.getElementById('modal-img');
+        const modalDescription = document.getElementById('modal-description');
+
+        const openModal = (e) => {
+            const button = e.currentTarget;
+            
+            modalTitle.textContent = button.dataset.title;
+            modalImg.src = button.dataset.img;
+            modalImg.alt = `Imagem do projeto ${button.dataset.title}`;
+            modalDescription.textContent = button.dataset.description;
+            
+            document.body.style.overflow = 'hidden'; // Impede o scroll do fundo
+            modalOverlay.classList.add('active');
+        };
+
+        const closeModal = () => {
+            document.body.style.overflow = ''; // Restaura o scroll do fundo
+            modalOverlay.classList.remove('active');
+        };
+
+        modalButtons.forEach(button => {
+            button.addEventListener('click', openModal);
+        });
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+        
+        // Fecha o modal com a tecla 'Escape'
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    });
+    </script>
 
 </body>
 
